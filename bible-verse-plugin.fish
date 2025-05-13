@@ -21,14 +21,14 @@ end tell'
 # Open frontend in Chrome
 open -a "Google Chrome" https://chatgpt.com/
 open -a "Obsidian" obsidian://open?vault=obsidian-plugins
-code .
+code ~/Repos/obsidian-plugins/.obsidian/plugins/bible-verse-obsidian
 clear
 
+# Clear current tab and focus on first tab
 osascript -e '
 tell application "iTerm"
     tell current window
-        tell current session
-            write text "cd ~/Repos/obsidian-plugins/.obsidian/plugins/bible-verse-obsidian"
-        end tell
+        select tab 1
+        tell current session of tab 1 to write text "cd ~/Repos/obsidian-plugins/.obsidian/plugins/bible-verse-obsidian; clear"
     end tell
 end tell'
