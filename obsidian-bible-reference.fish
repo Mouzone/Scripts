@@ -14,14 +14,14 @@ osascript -e '
 tell application "iTerm"
     tell current window
         create tab with default profile
-        tell current session to write text "cd ~/Repos/obsidian-plugins/.obsidian/plugins/bible-verse-obsidian && npm run dev"
+        tell current session to write text "cd ~/Repos/obsidian-plugins/.obsidian/plugins/obsidian-bible-reference/ && npm run dev"
     end tell
 end tell'
 
 # Open frontend in Chrome
 open -a "Google Chrome" https://chatgpt.com/
 open -a "Obsidian" obsidian://open?vault=obsidian-plugins
-code ~/Repos/obsidian-plugins/.obsidian/plugins/bible-verse-obsidian
+code ~/Repos/obsidian-plugins/.obsidian/plugins/obsidian-bible-reference/
 clear
 
 # Clear current tab and focus on first tab
@@ -29,6 +29,6 @@ osascript -e '
 tell application "iTerm"
     tell current window
         select tab 1
-        tell current session of tab 1 to write text "cd ~/Repos/obsidian-plugins/.obsidian/plugins/bible-verse-obsidian; clear"
+        tell current session of tab 1 to write text "cd ~/Repos/obsidian-plugins/.obsidian/plugins/obsidian-bible-reference/; clear"
     end tell
 end tell'
